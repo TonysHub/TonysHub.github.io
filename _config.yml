@@ -1,0 +1,207 @@
+# Site
+repository: TonysHub/TonysHub.github.io
+favicon: images/favicon.ico
+
+version: 2
+
+# Personal info
+name: 이동수
+title: 데이터를 활용하는 백엔드 개발자
+email: leegreen123@naver.com
+# website:
+
+# Social links
+# twitter_username:
+github_username: TonysHub
+# dribbble_username:
+# facebook_username:
+# flickr_username:
+instagram_username: the_second_loft
+linkedin_username: tonyleedongsoo
+# pinterest_username:
+# youtube_username:
+
+# About Section
+# about_title: About Me
+about_profile_image: images/profile2.png
+about_content: |
+  안녕하세요:raised_hand: 토론토에서 날아온 Django & Python / AWS & Docker 기반의 백엔드 개발자입니다. :rocket: <br>
+  캐나다에서는 학업을 병행하며 방학마다 인턴 기회를 찾아다녔습니다. <br>
+  **누적 투자액 3조원**의 벤쳐 캐피탈, **일 주문 2만건** 이상의 식료품 서비스 앱 회사에서 총 16개월 데이터 사이언티스트 인턴으로 근무하며
+  Ad-tech 사업에 관한 이해도를 높이며, 고객 코호트 분석과 스타트업 초기 데이터 스키마 구축을 했습니다. <br>
+  기존 경력을 활용하여, REST API와 인프라를 구성할 때도 데이터 활용 가능성을 고려하며, 데이터 보안을 우선 시 하는 개발자입니다. <br> 
+  **업무 / 프로젝트 활용 기술:**
+  <mark>Django</mark>
+  <mark>AWS</mark>
+  <mark>Docker</mark>
+  <mark>Postgres</mark>
+  <mark>Airflow</mark> <br>
+
+  학교 졸업 후 한국으로 돌아와 특전사로 18개월 군 복무(2021.06 ~ 2022.12)를 마치고, 현재 프로그래머스 데이터 엔지니어링 데브코스 수강(2023.05~2023.09)과 개인 프로젝트를 병행하고 있습니다. <br>
+  데브코스에는 팀장 역할을 맡으며, 다른 팀원들이 교육을 잘 따라올 수 있도록 리드하고 있습니다.
+
+content:
+  - title: 💻 Projects
+    layout: list
+    content:
+      - layout: left
+        title: Collaberr
+        sub_title: django 백엔드 개발자
+        caption: 2023.06 ~ 현재
+        additional_links:
+          - title: Collaberr-backend
+            icon: fab fa-github
+            url: https://github.com/TonysHub/collaberr-backend
+        link: https://github.com/TonysHub/collaberr-backend
+        quote: >
+          해외 마케팅 팀을 채용/운영 할 자본이 없는 중소기업에게 **해외 마케팅을 PaaS** 형태로 제공 <br>
+        description: |
+          * Django를 활용한 **REST API**와 데이터 스키마 구축, 서버 배포 담당
+          * Docker를 사용한 획일화된 테스팅 환경 설정과 GitHub Action을 통해 [DockerHub](https://hub.docker.com/repositories/tonylee9692)와 연동 CI 구축
+          * Django-split-settings를 적용하여, **개발 및 배포 환경 분리**
+          * **유저 데이터 보안**을 최우선으로 생각하여, 민감 정보는 모두 server-side에서 Http Only Cookie로 처리 (JWT, CSRF, Youtube API Token 등)
+          * AWS의 Least Privilege를 모티브로 API request에서 최대한 제한적인 권한 설정
+          * Docker 컨테이너에 Postgres & Pgadmin을 연결하여 프런트엔드 개발자도 백엔드와 쉽게 연결되는 테스팅 환경 구축
+          * YouTube API OAuth2를 구현하여, 데이터 추출 완료
+          * Analytics Dashboard에 **GraphQL**을 사용함으로, overfetching 최소화
+          * 현재 개발 진행중
+
+      - layout: left
+        title: Movie Trend Dashboard
+        sub_title: PM, 배포 및 인프라 설계 담당
+        caption: 2023.05.29 - 2023.06.02 (5일)
+        additional_links:
+          - title: 영화 트렌드 대시보드
+            icon: fab fa-github
+            url: https://github.com/data-dev-course/project2-team2
+        link: https://github.com/data-dev-course/project2-team2
+
+        quote: >
+          영화 진흥위원회 Open API를 활용하여 영화 트렌드 대시보드 **AWS 인프라** 배포 <br>
+        description: |
+          * AWS 인프라를 개인적으로 [공부](https://velog.io/@tonys_hub?tag=Knowledge)하여, 현업에서 쓰이는 구조와 동일한 [인프라](https://user-images.githubusercontent.com/43350428/242866357-a54e009f-0ec3-4b9d-8311-f5f19a28e08c.png) 구성 
+          * **Bastion Host를 사용**함으로써 Private subnet의 접근을 제한하며, NAT Gateway를 통해 API 호출 후 Gateway Endpoint로 S3 버킷에 적재
+          * 같은 Region 안에 있는 버킷임으로 Gateway Endpoint로 비용 최소화, 데이터 네트워크 비용 절감
+          * S3의 **Object-based Storage** 특성을 활용하여, 매일 추출한 데이터를 Over-ride 하여, 쿼리의 간편화
+          * Amazon SageMaker를 이용하여, 당일 영화 매출 예측 모델을 구축하여, Redshift ETL 작업 수행
+          * 프로젝트 진행 도중 Redshift Serverless의 비용이 많이 나오는 것을 인지하여, **Amazon ElastiCache Redis 적용**, AWS 비용 70% 감소
+          * 프로젝트 팀장으로써, 각 조원의 성향과 역량을 고려하여 트렐로 티켓 배정
+
+      - layout: left
+        title: Subway Infographics
+        sub_title: PM, django 백엔드 담당
+        link: https://github.com/TonysHub/subway
+        additional_links:
+          - title: Subway Infographics
+            icon: fab fa-github
+            url: https://github.com/TonysHub/subway
+        caption: 2023.05.01 - 2023.05.05 (5일)
+
+        quote: >
+          서울시 지하철의 유동인구 동향과 자주 가는 역의 혼잡도 분석
+        description: |
+          * [서울시 통계청](https://data.seoul.go.kr/dataList/OA-12914/S/1/datasetView.do)에서 지하철 관련 데이터를 크롤링해 지하철 노선, 역별 유동인구 파악
+          * Django Backend 구조의 필수 요소 View, Model, Template, Url 등 설정
+          * Django template tag를 활용하여, 다이나믹 템플릿 UI 구성
+          * 데이터 파이프라인을 맡은 팀원과 협업하여, Testing부터 배포까지 순차적인 개선 (csv -> fixture -> serializer)
+          * Plotly를 사용한 interactive 대시보드 제작
+          * 스케줄의 차질이 생겨 참여하지 못한 팀원이 있었지만, 조율을 통해 데드라인 내에 프로젝트 완성
+
+      - layout: left
+        title: Lumos Lux
+        sub_title: 데이터 분석 및 검증 담당
+        link: https://www.lumosglasses.com/
+        caption: 2020.08 - 2021.06
+        quote: >
+          University of Waterloo 4학년 졸업작품으로, CES 투자 제안
+        description: |
+          * 불면증 개선을 위한 스마트 Light-Therapy Glasses
+          * 시장 데이터 분석, 고객 만족도 검증, Mechanical Design 담당
+          * 높은 고객 만족도와 불면증치료 업계의 집중을 받으며, [Stanford University Dr.Jamie Zeitzer](https://profiles.stanford.edu/jamie-zeitzer) 교수님과 광학 연구 협업
+          * [ANSYS Design Analytics Award, 1등](https://uwaterloo.ca/engineering-ideas-clinic/design-analysis-competition)
+          * [SFF 온타리오주 Engineering Competition 혁신 디자인, 2등](https://www.instagram.com/p/CKrCyEUJ4pP/) (매년 링크 초기화로, 인스타그램만 남아있음)
+          * [Baylis Medical Capstone Design 수상](https://www.eng.uwaterloo.ca/2021-capstone-design/mechanical/participants-2/)
+          * 광선요법 치료 특허 출원, Google Patents [CA3081398A1](https://patents.google.com/patent/CA3081398A1/en?oq=CA3081398A1) (성명 오타)
+
+  - title: 🧰 Skills # title for the section
+    quote: >
+      현재 프로젝트 또는 이전에 사용했던 기술
+    layout: list
+    content:
+      - layout: left
+        title: Backend
+        description: |
+          * Django: 메인 백엔드 프레임웍
+          * DRF(django_rest_framework): 현재 진행중인 Collaberr에서 Viewset, CustomJWTAuthentication, CustomManager 등 다양한 소스코드 overriding을 통해 이해도를 높임
+          * DRF_simplejwt: CustomJWTTokenObtainView을 구현하여, 로그인시 HttpOnly 쿠키에 있는 정보로, 유저 authentication 진행 (프런트엔드 업무 최소화)
+          * Django_split_settings: prod, docker, envvar, aws 등 프로덕션 레벨의 설정 적용
+          * Pytest & model-bakery: model-bakery를 이용하여 fixture 생성 후 pytest
+
+      - layout: left
+        title: AWS
+        description: |
+          * VPC: 네트워크와 권한 설정 Least-Privilege Principal 적용
+          * Redshift Serverless: EventBridge를 통해 스케줄링 쿼리 생성
+          * EC2: Bastion 호스트를 연결하고, SSH 방법을 정리해서 팀원들이 쉽게 이용할 수 있도록 공유
+          * S3, Route53, boto3 (AWS SDK), ElastiCache
+          * 특히 네트워크에 관심이 많아 O'Reilly에서 제공하는 [AWS 강의 정리](https://velog.io/@tonys_hub)
+          * SageMaker: ELT 과정에서 다양한 전처리(One-hotencoding, stratifiedfolds, IQR) 과정을 통해 AutoML 적용, R 스코어 0.91
+
+      - layout: left
+        title: Data
+        description: |
+          * PostgreSQL: 모든 개인 프로젝트에 사용, Mixpanel Integration 데이터 스키마 제작 경험
+          * MongoDB: 현업에서 사용
+          * Airflow: ETL 관련 DAG 작성
+          * Superset: Redshift Serverless, Redis Cache와 연결하여 대시보드 제작
+
+  - title: 🎓 Education
+    layout: list
+    content:
+      - title: 프로그래머스 데이터 엔지니어링 데브코스 1기
+        sub_title: 3팀 팀장
+        caption: 2023.05 - 2023.09
+        description: |
+          * 군 복무 후, 개발 능력을 가다듬기 위해 시작
+          * 데이터 엔지니어로써 알아야 할 데이터 인프라, Docker, Airflow, DBT, ETL, ELT, A/B 테스팅, Spark 등을 학습
+          * 데브코스만으로는 실습이 적어서 개인 프로젝트도 같이 진행중에 있음
+          * 과정 진행 중, django의 매력에 빠져 모든 프로젝트 백엔드 개발 담당
+
+      - title: University of Waterloo
+        sub_title: 기계공학과, 우등학사 (B.A.Sc, Honors)
+        caption: 2015.06 - 2021.06
+        description: |
+          * President's 입학 장학금 수료
+          * 졸업작품 각종 대회 수상
+          * 학기와 병행하며, **총 32개월**의 인턴 경험
+          * 학과 관련 인턴을 1년 정도 하다가, 기계공학보다는 프로그래밍이 재밌어서, 이후는 데이터 관련 직군으로 취업
+
+  - title: 🪖 Military
+    layout: list
+    content:
+      - title: 특수전사령부 (특전사)
+        sub_title: 정보처 어학병 병장 만기전역
+        caption: 2021.06 - 2022.12
+        description: |
+          * 한미 연합 군사 훈련에서 군 첩보, 정보, 작전 통번역을 지원하여 한미 특전부대 협력 강화
+          * 수상: UFS 훈련 CSOCC 미군 정보처장 [표창장 수여](https://github.com/TonysHub/TonysHub/assets/43350428/b36930f0-5366-4b95-b2b9-32e9724a8d36)
+
+  - title: ✨ Fun Fact
+    layout: text
+    content: | # this will include new lines to allow paragraphs
+      * IDE로는 nvim을 사용, [config 리포](https://github.com/TonysHub/nvim)
+      * 과거 구독자 14,000명을 보유한 [패션 유튜브 채널](https://www.youtube.com/@TheSecondLoft)을 운영하였으며, 현재도 의류에 깊은 관심이 있습니다.
+      * 새로운 경험과 여행을 좋아하며, 독일 Bosch에서 기계공학 관련 인턴을 하던 도중, 퇴근 후 프로그래밍을 배우게 됐고, 현재까지 왔습니다.
+      * 가장 좋아하는 음식: 햄버거 (한번에 모든 영양소를 섭취하고, 간단하게 먹을 수 있다. 심지어 맛있다)
+      * 개인 의지를 표출하는 것을 좋아함. 게임을 끊고 싶어서 데스크톱을 없앴고, 침대에 누워있는 시간을 줄이기 위해 현재는 접이식 매트리스를 쓰며, 매일 아침마다 접어둡니다. 
+      * 감명 깊게 읽은 책: [디커플링](https://www.yes24.com/Product/Goods/79209287) - 탈레스 S. 테이세라
+# Footer
+footer_show_references: false
+
+# Build settings
+remote_theme: sproogen/resume-theme
+
+# sass:
+#   style: compressed
+
+gems: ["jemoji"]
