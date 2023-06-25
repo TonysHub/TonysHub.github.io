@@ -118,42 +118,19 @@ content:
           * 광선요법 치료 특허 출원, Google Patents [CA3081398A1](https://patents.google.com/patent/CA3081398A1/en?oq=CA3081398A1) (성명 오타)
           
   - title: 역량 # title for the section
+    quote: >
+      현재 프로젝트 또는 이전에 사용했던 기술
     layout: list
     content:
       - layout: left
         border: weak
-        title: collaberr
-        link: https://github.com/tonyshub/collaberr-backend
-        additional_links:
-          - title: collaberr-backend
-            icon: fab fa-github
-            url: https://github.com/tonyshub/collaberr-backend
-        quote: >
-          해외 마케팅 팀을 채용/운영 할 여력이 없는 중소기업에게 해외 마케팅을 PaaS 형태로 제공
+        title: Backend
         description: |
           * Django를 활용한 REST API와 데이터 스키마 구축, 서버 배포 담당
           * 스코프가 큰 프로젝트인 만큼 번아웃을 방지하며, 2023년 말까지 AWS 서버에 배포 예정
           * 도커를 사용한 획일화된 테스팅 환경 설정
           
-      - layout: top-middle
-        title: itsgoingto.be
-        link: www.itsgoingto.be
-        additional_links:
-          - title: sproogen/itsgoingto.be
-            icon: fab fa-github
-            url: https://github.com/sproogen/itsgoingto.be
-        quote: >
-          itsgoingto.be is a simple voting site where a user can ask a question or topic top put to a vote. This question
-          can then be shared with their friends/colleagues to vote on things like 'Where should we go for lunch?'.
-        description: |
-          The API for this site has been build using <mark>Node.js</mark> while the front end is a <mark>React</mark>/<mark>Redux</mark> app.
-          I have used <mark>Docker</mark> to set up a development environment and <mark>Heroku</mark> to deploy and host the site. I have
-          a suite of unit and API tests for the backend and unit tests for the front end.
 
-          I have been using this project as a way to increase many of my skills and also learn new things, most recently sockets and Node.JS. I have particually
-          enjoyed managing my own project and designing my own architecture and implementing this to a high standard.
-
-          Feel free to check out the whole project on GitHub to get a feel for how I work [here](https://github.com/sproogen/itsgoingto.be).
 
   - title: Education
     layout: list
@@ -164,22 +141,18 @@ content:
         description: |
           * President's 입학 장학금 수료
           * 졸업작품 각종 대회 수상
+          * 학기와 병행하며, **총 32개월**의 인턴 경험
+          * 학과 관련 인턴을 1년 정도 하다가, 기계공학보다는 프로그래밍이 재밌어서, 이후는 데이터 관련 직군으로 취업
 
-  - title: When I'm Not Programming
+  - title: Fun Fact
     layout: text
     content: | # this will include new lines to allow paragraphs
-      When I'm not sat at my desk I am very active and spend most of my time outdoors. I do a lot a sports such as
-      mountain biking, road cycling, kitesuring and horse riding as well as trying to make time for things like
-      rock climbing and playing some rugby. I currently have 2 horses and find this is a great way to get out of the house
-      and taking my mind of things while learing to showjump.
-
-      I'm interested in photography and videography as I like to be creative, this is mainly through sport but
-      I enjoy landscape and abstract photography too. I like to showcase my work on instagram if
-      you would like to take a look - [jameswgrant](https://www.instagram.com/jameswgrant/).
-
-      Finally during the rest of my free time you will either find me working on my bikes, rock climbing at one of
-      Bristol's indoor climbing centres or down 'The Rec' supporting Bath Rugby.
-
+      * IDE로는 nvim을 사용합니다 :)
+      * 과거 구독자 14,000명을 보유한 패션 유튜브 채널을 운영하였으며, 현재도 의류에 깊은 관심이 있습니다.
+      * 새로운 경험과 여행을 좋아하며, 독일 Bosch에서 기계공학 관련 인턴을 하던 도중, 퇴근 후 프로그래밍을 배우게 됐고, 현재까지 왔습니다.
+      * 가장 좋아하는 음식: 햄버거 (한번에 모든 영양소를 섭취하고, 간단하게 먹을 수 있다. 심지어 맛있다)
+      * 개인 의지를 표출하는 것을 좋아함. 게임을 끊고 싶어서 데스크톱을 없앴고, 침대에 누워있는 시간을 줄이기 위해 현재는 접이식 매트리스를 쓰며, 매일 아침마다 접어둡니다. 
+      * 감명 깊게 읽은 책: 디커플링 - 탈레스 S. 테이세라
 # Footer
 footer_show_references: false
 
