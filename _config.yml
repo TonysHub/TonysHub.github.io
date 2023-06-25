@@ -47,10 +47,9 @@ content:
     layout: list
     content:
       - layout: left
-        border: weak
         title: Collaberr
-        sub_title: 백엔드 개발자 
-        dates: 2023.06 ~ 현재
+        sub_title: django 백엔드 개발자 
+        caption: 2023.06 ~ 현재
         link: https://github.com/TonysHub/collaberr-backend
         additional_links:
           - title: Collaberr-backend
@@ -69,10 +68,9 @@ content:
           * 현재 개발 진행중
 
       - layout: left
-        border: weak
         title: Movie Trend Dashboard
-        subtitle: 팀장, 배포 및 인프라 설계
-        dates: 2023.05.29 - 2023.06.02 (5일)
+        sub_title: 팀장, 배포 및 인프라 설계
+        caption: 2023.05.29 - 2023.06.02 (5일)
         link: https://github.com/data-dev-course/project2-team2
         additional_links:
           - title: 영화 트렌드 대시보드
@@ -81,7 +79,7 @@ content:
         quote: >
           영화 진흥위원회 Open API를 활용하여 데이터 분석 대시보드를 만드는 데브코스 프로젝트 <br>
         description: |
-          * [AWS 인프라를 개인적으로 공부](https://velog.io/@tonys_hub?tag=Knowledge)하여, 현업에서 쓰이는 구조와 동일한 [인프라](https://user-images.githubusercontent.com/43350428/242866357-a54e009f-0ec3-4b9d-8311-f5f19a28e08c.png) 구성 
+          * AWS 인프라를 개인적으로 [공부](https://velog.io/@tonys_hub?tag=Knowledge)하여, 현업에서 쓰이는 구조와 동일한 [인프라](https://user-images.githubusercontent.com/43350428/242866357-a54e009f-0ec3-4b9d-8311-f5f19a28e08c.png) 구성 
           * **Bastion Host를 사용**함으로써 Private subnet의 접근을 제한하며, NAT Gateway를 통해 API 호출 후 Gateway Endpoint로 S3 버킷에 적재
           * 같은 Region 안에 있는 버킷임으로 Gateway Endpoint로 비용 최소화
           * S3의 **Object-based Storage** 특성을 활용하여, 매일 추출한 데이터를 Over-ride 하는 방식 적용
@@ -92,11 +90,10 @@ content:
           * 프로젝트 팀장으로써, 각 조원의 성향과 역량을 고려하여 트렐로 티켓 배정
           
       - layout: left
-        border: weak
         title: Subway Infographics
-        sub_title: 팀장, Django 백엔드
+        sub_title: 팀장, django 백엔드
         link: https://github.com/TonysHub/subway
-        dates: 2023.05.01 - 2023.05.05 (5일)
+        caption: 2023.05.01 - 2023.05.05 (5일)
         additional_links: 
           - title: Subway Infographics
             icon: fab fa-github
@@ -104,7 +101,7 @@ content:
         quote: >
           서울시 지하철의 유동인구 동향과 자주 가는 역의 혼잡도 분석
         description: |
-          * 서울시 통계청에서 지하철 관련 API를 통해 지하철 노선, 역별 유동인구 파악
+          * [서울시 통계청](https://data.seoul.go.kr/dataList/OA-12914/S/1/datasetView.do)에서 지하철 관련 데이터를 크롤링해 지하철 노선, 역별 유동인구 파악
           * 데이터는 매일 cronjob을 통해 적재
           * Django Backend 구조의 기초적인 View, Model, Template, Url 등 설정
           * 데이터 파이프라인을 맡은 팀원과 협업하여, Testing부터 배포까지 순차적인 개선 (csv -> fixture -> serializer)
@@ -112,10 +109,9 @@ content:
           * 스케줄의 차질이 생겨 참여하지 못한 팀원이 있었지만, 조율을 통해 데드라인 내에 프로젝트 완성
 
       - layout: left
-        border: weak
         title: Lumos Lux
         sub_title: 데이터 분석 및 검증
-        dates: 2020.08 - 2021.06
+        caption: 2020.08 - 2021.06
         quote: >
           University of Waterloo 4학년 졸업작품으로, CES에서 투자 제의
         description: |
@@ -132,7 +128,7 @@ content:
       현재 프로젝트 또는 이전에 사용했던 기술
     layout: list
     content:
-      - layout: top-middle
+      - layout: left
         title: Backend
         description: |
           * Django: 백엔드 프레임웍
@@ -142,7 +138,7 @@ content:
           * Pytest & model-bakery: model-bakery를 이용하여 fixture 생성 후 테스트
            
       
-      - layout: top-middle
+      - layout: left
         title: AWS
         description: |
           * VPC: 네트워크와 권한 설정 Least-Privilege Principal 적용
@@ -152,7 +148,7 @@ content:
           * 특히 네트워크에 관심이 많아 O'Reilly에서 제공하는 [AWS 강의 정리](https://velog.io/@tonys_hub)
           * SageMaker: ELT 과정에서 AutoML을 적용하여, predicted_sales 컬럼 추가
 
-      - layout: top-middle
+      - layout: left
         title: Data
         description: |
           * Flashfood에서 User Analytics Tool Integration 데이터 스키마 제작
@@ -166,7 +162,7 @@ content:
     content:
       - title: 프로그래머스 데이터 엔지니어링 데브코스 1기
         sub_title: 3팀 팀장
-        dates: 2022.05 - 2022.09
+        caption: 2022.05 - 2022.09
         description: |
           * 군 복무 후, 개발 능력을 가다듬기 위해 시작
           * 데이터 엔지니어로써 알아야 할 데이터 인프라, Docker, Airflow, DBT, ETL, ELT, A/B 테스팅, Spark 등을 학습
@@ -175,7 +171,7 @@ content:
 
       - title: University of Waterloo
         sub_title: 기계공학과, 우등학사 (B.A.Sc, Honors)
-        dates: 2015.06 - 2021.06
+        caption: 2015.06 - 2021.06
         description: |
           * President's 입학 장학금 수료
           * 졸업작품 각종 대회 수상
