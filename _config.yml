@@ -6,7 +6,7 @@ version: 2
 
 # Personal info
 name: 이동수
-title: 데이터를 활용하는 백엔드 엔지니어
+title: 데이터를 활용하는 백엔드 개발자
 email: leegreen123@naver.com
 website: https://velog.io/@tonys_hub
 
@@ -48,13 +48,13 @@ content:
     content:
       - layout: left
         title: Collaberr
-        sub_title: django 백엔드 개발자 
+        sub_title: django 백엔드 개발자
         caption: 2023.06 ~ 현재
-        link: https://github.com/TonysHub/collaberr-backend
         additional_links:
           - title: Collaberr-backend
             icon: fab fa-github
             url: https://github.com/TonysHub/collaberr-backend
+        link: https://github.com/TonysHub/collaberr-backend
         quote: >
           해외 마케팅 팀을 채용/운영 할 자본이 없는 중소기업에게 해외 마케팅을 PaaS 형태로 제공 <br>
 
@@ -65,17 +65,19 @@ content:
           * **유저 데이터 보안**을 최우선으로 생각하여, 민감 정보는 모두 server-side에서 Http Only Cookie로 처리 (JWT, CSRF, Youtube API Token 등)
           * AWS의 Least Privilege를 모티브로 API request에서 최대한 제한적인 권한 설정
           * 테스팅용 컨테이너에 Postgres & Pgadmin을 연결하여 개발 최적화
+          * YouTube API OAuth2를 구현하여, 데이터 추출 완료
           * 현재 개발 진행중
 
       - layout: left
         title: Movie Trend Dashboard
-        sub_title: 팀장, 배포 및 인프라 설계
+        sub_title: PM, 배포 및 인프라 설계 담당
         caption: 2023.05.29 - 2023.06.02 (5일)
-        link: https://github.com/data-dev-course/project2-team2
         additional_links:
           - title: 영화 트렌드 대시보드
             icon: fab fa-github
             url: https://github.com/data-dev-course/project2-team2
+        link: https://github.com/data-dev-course/project2-team2
+
         quote: >
           영화 진흥위원회 Open API를 활용하여 데이터 분석 대시보드를 만드는 데브코스 프로젝트 <br>
         description: |
@@ -83,21 +85,20 @@ content:
           * **Bastion Host를 사용**함으로써 Private subnet의 접근을 제한하며, NAT Gateway를 통해 API 호출 후 Gateway Endpoint로 S3 버킷에 적재
           * 같은 Region 안에 있는 버킷임으로 Gateway Endpoint로 비용 최소화
           * S3의 **Object-based Storage** 특성을 활용하여, 매일 추출한 데이터를 Over-ride 하는 방식 적용
-          * Amazon SageMaker를 이용하여, 당일 영화 매출 예측 후 predicted_sales 컬럼에 저장
-          * S3에 당일 데이터가 저장되면, EventBridge를 이용하여, Redshift에 ETL 진행
-          * 프로젝트 진행 도중 Redshift Serverless의 비용이 많이 나오는 것을 인지하여, **Amazon ElastiCache Redis 적용**
-          * Superset을 EC2 프리티어 인스턴스에 띄운 후, 대시보드 제작
+          * Amazon SageMaker를 이용하여, 당일 영화 매출 예측 모델을 구축하여, Redshift ETL 작업 수행
+          * 프로젝트 진행 도중 Redshift Serverless의 비용이 많이 나오는 것을 인지하여, **Amazon ElastiCache Redis 적용**, AWS 비용 70% 감소
           * 프로젝트 팀장으로써, 각 조원의 성향과 역량을 고려하여 트렐로 티켓 배정
           
       - layout: left
         title: Subway Infographics
-        sub_title: 팀장, django 백엔드
+        sub_title: PM, django 백엔드 담당
         link: https://github.com/TonysHub/subway
-        caption: 2023.05.01 - 2023.05.05 (5일)
         additional_links: 
           - title: Subway Infographics
             icon: fab fa-github
             url: https://github.com/TonysHub/subway
+        caption: 2023.05.01 - 2023.05.05 (5일)
+
         quote: >
           서울시 지하철의 유동인구 동향과 자주 가는 역의 혼잡도 분석
         description: |
@@ -110,7 +111,7 @@ content:
 
       - layout: left
         title: Lumos Lux
-        sub_title: 데이터 분석 및 검증
+        sub_title: 데이터 분석 및 검증 담당
         caption: 2020.08 - 2021.06
         quote: >
           University of Waterloo 4학년 졸업작품으로, CES에서 투자 제의
@@ -162,7 +163,7 @@ content:
     content:
       - title: 프로그래머스 데이터 엔지니어링 데브코스 1기
         sub_title: 3팀 팀장
-        caption: 2022.05 - 2022.09
+        caption: 2023.05 - 2023.09
         description: |
           * 군 복무 후, 개발 능력을 가다듬기 위해 시작
           * 데이터 엔지니어로써 알아야 할 데이터 인프라, Docker, Airflow, DBT, ETL, ELT, A/B 테스팅, Spark 등을 학습
@@ -177,6 +178,16 @@ content:
           * 졸업작품 각종 대회 수상
           * 학기와 병행하며, **총 32개월**의 인턴 경험
           * 학과 관련 인턴을 1년 정도 하다가, 기계공학보다는 프로그래밍이 재밌어서, 이후는 데이터 관련 직군으로 취업
+          
+  - title: 🪖 Military
+    layout: list
+    content:
+      - title: 특수전사령부 (특전사)
+        sub_title: 정보처 어학병
+        caption: 2021.06 - 2022.12
+        description: |
+          * 한미 연합 군사 훈련에서 군 첩보 및 정보 통번역을 지원하여 특전부대 협력을 강화
+          * 수상: CSOCC 미군 정보처장 [표창장 수여](https://github.com/TonysHub/TonysHub/assets/43350428/b36930f0-5366-4b95-b2b9-32e9724a8d36)
 
   - title: ✨ Fun Fact
     layout: text
