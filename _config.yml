@@ -64,9 +64,8 @@ content:
           * Django-split-settings를 적용하여, **개발 및 배포 환경 분리**
           * **유저 데이터 보안**을 최우선으로 생각하여, 민감 정보는 모두 server-side에서 Http Only Cookie로 처리 (JWT, CSRF, Youtube API Token 등)
           * AWS의 Least Privilege를 모티브로 API request에서 최대한 제한적인 권한 설정
-          * Docker 컨테이너에 Postgres & Pgadmin을 연결하여 프런트엔드 개발자도 백엔드와 쉽게 연결되는 테스팅 환경 구축
+          * 테스팅용 컨테이너에 Postgres & Pgadmin을 연결하여 개발 최적화
           * YouTube API OAuth2를 구현하여, 데이터 추출 완료
-          * Analytics Dashboard에 **GraphQL**을 사용함으로, overfetching 최소화
           * 현재 개발 진행중
 
       - layout: left
@@ -80,12 +79,12 @@ content:
         link: https://github.com/data-dev-course/project2-team2
 
         quote: >
-          영화 진흥위원회 Open API를 활용하여 영화 트렌드 대시보드를 AWS 인프라에 띄워 배포 <br>
+          영화 진흥위원회 Open API를 활용하여 데이터 분석 대시보드를 만드는 데브코스 프로젝트 <br>
         description: |
           * AWS 인프라를 개인적으로 [공부](https://velog.io/@tonys_hub?tag=Knowledge)하여, 현업에서 쓰이는 구조와 동일한 [인프라](https://user-images.githubusercontent.com/43350428/242866357-a54e009f-0ec3-4b9d-8311-f5f19a28e08c.png) 구성 
           * **Bastion Host를 사용**함으로써 Private subnet의 접근을 제한하며, NAT Gateway를 통해 API 호출 후 Gateway Endpoint로 S3 버킷에 적재
-          * 같은 Region 안에 있는 버킷임으로 Gateway Endpoint로 비용 최소화, 데이터 네트워크 절감
-          * S3의 **Object-based Storage** 특성을 활용하여, 매일 추출한 데이터를 Over-ride 하여, 쿼리의 간편화
+          * 같은 Region 안에 있는 버킷임으로 Gateway Endpoint로 비용 최소화
+          * S3의 **Object-based Storage** 특성을 활용하여, 매일 추출한 데이터를 Over-ride 하는 방식 적용
           * Amazon SageMaker를 이용하여, 당일 영화 매출 예측 모델을 구축하여, Redshift ETL 작업 수행
           * 프로젝트 진행 도중 Redshift Serverless의 비용이 많이 나오는 것을 인지하여, **Amazon ElastiCache Redis 적용**, AWS 비용 70% 감소
           * 프로젝트 팀장으로써, 각 조원의 성향과 역량을 고려하여 트렐로 티켓 배정
@@ -104,10 +103,10 @@ content:
           서울시 지하철의 유동인구 동향과 자주 가는 역의 혼잡도 분석
         description: |
           * [서울시 통계청](https://data.seoul.go.kr/dataList/OA-12914/S/1/datasetView.do)에서 지하철 관련 데이터를 크롤링해 지하철 노선, 역별 유동인구 파악
-          * Django Backend 구조의 필수 요소 View, Model, Template, Url 등 설정
-          * Django template tag를 활용하여, 다이나믹 템플릿 UI 구성
+          * 데이터는 매일 cronjob을 통해 적재
+          * Django Backend 구조의 기초적인 View, Model, Template, Url 등 설정
           * 데이터 파이프라인을 맡은 팀원과 협업하여, Testing부터 배포까지 순차적인 개선 (csv -> fixture -> serializer)
-          * Plotly를 사용한 interactive 대시보드 제작
+          * 팀원 모두가 만족하는 프로젝트 결과와 과정을 달성
           * 스케줄의 차질이 생겨 참여하지 못한 팀원이 있었지만, 조율을 통해 데드라인 내에 프로젝트 완성
 
       - layout: left
@@ -116,11 +115,11 @@ content:
         link: https://www.lumosglasses.com/
         caption: 2020.08 - 2021.06
         quote: >
-          University of Waterloo 4학년 졸업작품으로, CES 투자 제안
+          University of Waterloo 4학년 졸업작품으로, CES에서 투자 제의
         description: |
           * 불면증 개선을 위한 스마트 Light-Therapy Glasses
           * 시장 데이터 분석, 고객 만족도 검증, Mechanical Design 담당
-          * 높은 고객 만족도와 불면증 치료 업계의 집중을 받으며, [Stanford University Dr.Jamie Zeitzer](https://profiles.stanford.edu/jamie-zeitzer) 교수님과 광학 연구 협업
+          * 높은 고객 만족도와 불면증치료 업계의 집중을 받으며, [Stanford University Dr.Jamie Zeitzer](https://profiles.stanford.edu/jamie-zeitzer) 교수님과 광학 연구 협업
           * [ANSYS Design Analytics Award, 1등](https://uwaterloo.ca/engineering-ideas-clinic/design-analysis-competition)
           * [SFF 온타리오주 Engineering Competition 혁신 디자인, 2등](https://www.instagram.com/p/CKrCyEUJ4pP/) (매년 링크 초기화로, 인스타그램만 남아있음)
           * [Baylis Medical Capstone Design 수상](https://www.eng.uwaterloo.ca/2021-capstone-design/mechanical/participants-2/)
@@ -134,11 +133,11 @@ content:
       - layout: left
         title: Backend
         description: |
-          * Django: 메인 백엔드 프레임웍
+          * Django: 백엔드 프레임웍
           * DRF(django_rest_framework): 현재 진행중인 Collaberr에서 Viewset, CustomJWTAuthentication, CustomManager 등 다양한 소스코드 overriding을 통해 이해도를 높임
-          * DRF_simplejwt: CustomJWTTokenObtainView을 구현하여, 로그인시 HttpOnly 쿠키에 있는 정보로, 유저 authentication 진행 (프런트엔드 업무 최소화)
-          * Django_split_settings: prod, docker, envvar, aws 등 프로덕션 레벨의 설정 적용
-          * Pytest & model-bakery: model-bakery를 이용하여 fixture 생성 후 pytest
+          * DRF_simplejwt: CustomJWTTokenObtainView 제작, 기존 TokenObtainView는 httponly 쿠키를 바로 설정할 수 없었지만, 가능한 커스텀 View
+          * Django_split_settings: prod, docker, envvar 등 프로덕션 레벨의 설정 적용
+          * Pytest & model-bakery: model-bakery를 이용하여 fixture 생성 후 테스트
            
       
       - layout: left
@@ -154,11 +153,11 @@ content:
       - layout: left
         title: Data
         description: |
-          * PostgreSQL: 모든 개인 프로젝트에 사용, Mixpanel Integration 데이터 스키마 제작 경험
+          * Flashfood에서 User Analytics Tool Integration 데이터 스키마 제작
+          * PostgreSQL: 모든 개인 프로젝트에 사용
           * MongoDB: 현업에서 사용
           * Airflow: ETL 관련 DAG 작성
           * Superset: Redshift Serverless, Redis Cache와 연결하여 대시보드 제작
-          * SageMaker: 다양한 전처리 과정을 테스팅하여, AutoML R^2=0.91 달성
 
   - title: 🎓 Education
     layout: list
@@ -170,7 +169,7 @@ content:
           * 군 복무 후, 개발 능력을 가다듬기 위해 시작
           * 데이터 엔지니어로써 알아야 할 데이터 인프라, Docker, Airflow, DBT, ETL, ELT, A/B 테스팅, Spark 등을 학습
           * 데브코스만으로는 실습이 적어서 개인 프로젝트도 같이 진행중에 있음
-          * 과정 진행 중, django의 매력에 빠져 모든 프로젝트 백엔드 개발 담당
+          * 좋은 멘토님과 팀원들을 만나서 기쁨
 
       - title: University of Waterloo
         sub_title: 기계공학과, 우등학사 (B.A.Sc, Honors)
@@ -185,15 +184,15 @@ content:
     layout: list
     content:
       - title: 특수전사령부 (특전사)
-        sub_title: 정보처 어학병 병장 만기전역
+        sub_title: 정보처 어학병
         caption: 2021.06 - 2022.12
         description: |
-          * 한미 연합 군사 훈련에서 군 첩보, 정보, 작전 통번역을 지원하여 한미 특전부대 협력 강화
-          * 수상: UFS 훈련 CSOCC 미군 정보처장 [표창장 수여](https://github.com/TonysHub/TonysHub/assets/43350428/b36930f0-5366-4b95-b2b9-32e9724a8d36)
+          * 한미 연합 군사 훈련에서 군 첩보 및 정보 통번역을 지원하여 특전부대 협력을 강화
+          * 수상: CSOCC 미군 정보처장 [표창장 수여](https://github.com/TonysHub/TonysHub/assets/43350428/b36930f0-5366-4b95-b2b9-32e9724a8d36)
 
   - title: ✨ Fun Fact
     layout: text
-    content: | 
+    content: | # this will include new lines to allow paragraphs
       * IDE로는 nvim을 사용, [config 리포](https://github.com/TonysHub/nvim)
       * 과거 구독자 14,000명을 보유한 [패션 유튜브 채널](https://www.youtube.com/@TheSecondLoft)을 운영하였으며, 현재도 의류에 깊은 관심이 있습니다.
       * 새로운 경험과 여행을 좋아하며, 독일 Bosch에서 기계공학 관련 인턴을 하던 도중, 퇴근 후 프로그래밍을 배우게 됐고, 현재까지 왔습니다.
