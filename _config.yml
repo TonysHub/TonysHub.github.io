@@ -29,13 +29,15 @@ about_content: |
   캐나다에서는 학업을 병행하며 방학마다 인턴 기회를 찾아다녔습니다. <br>
   **누적 투자액 3조원**의 벤쳐 캐피탈, **일 주문 2만건** 이상의 식료품 서비스 앱 회사에서 총 16개월 데이터 사이언티스트 인턴으로 근무하며
   Ad-tech 사업에 관한 이해도를 높이며, 고객 코호트 분석과 스타트업 초기 데이터 스키마 구축을 했습니다. <br>
-  기존 경력을 활용하여, REST API와 인프라를 구성할 때도 데이터 활용 가능성을 고려하며, 데이터 보안을 우선 시 하는 개발자입니다. <br> 
+  기존 경력을 활용하여, REST API와 인프라를 구성할 때도 데이터 활용 가능성을 고려하며, 데이터 보안을 가장 우선시 합니다. <br> 
   **업무 / 프로젝트 활용 기술:**
   <mark>Django</mark>
   <mark>AWS</mark>
   <mark>Docker</mark>
   <mark>Postgres</mark>
-  <mark>Airflow</mark> <br>
+  <mark>Airflow</mark>
+  <mark>Pandas</mark>
+  <br>
   
   학교 졸업 후 한국으로 돌아와 특전사로 18개월 군 복무(2021.06 ~ 2022.12)를 마치고, 현재 프로그래머스 데이터 엔지니어링 데브코스 수강(2023.05~2023.09)과 개인 프로젝트를 병행하고 있습니다. <br>
   데브코스에는 팀장 역할을 맡으며, 다른 팀원들이 교육을 잘 따라올 수 있도록 리드하고 있습니다.
@@ -61,7 +63,8 @@ content:
           * Django를 활용한 **REST API**와 데이터 스키마 구축, 서버 배포 담당
           * Docker를 사용한 획일화된 테스팅 환경 설정과 GitHub Action을 통해 [DockerHub](https://hub.docker.com/repositories/tonylee9692)와 연동 CI 구축
           * Django-split-settings를 적용하여, [개발 및 배포 환경 분리](https://github.com/TonysHub/collaberr-backend/blob/main/core/project/settings/__init__.py)
-          * **유저 데이터 보안**을 최우선으로 생각하여, 민감 정보는 모두 server-side에서 Http Only Cookie로 처리 ([CustomJWT](https://github.com/TonysHub/collaberr-backend/blob/main/core/general/authentication.py), CSRF, Youtube API Token 등)
+          * **유저 데이터 보안**을 최우선으로 생각하여, 민감 정보는 모두 server-side에서 Http Only Cookie로 처리 <br>
+            ([CustomJWT](https://github.com/TonysHub/collaberr-backend/blob/main/core/general/authentication.py), CSRF, Youtube API Token 등)
           * AWS의 Least Privilege Principal를 모티브로 API request에서 최대한 제한적인 권한 설정
           * YouTube API OAuth2 연동 후, [Custom Hook](https://github.com/TonysHub/collaberr-backend/blob/main/core/plugins/youtube/youtube_analytics.py)을 생성하여 데이터 연결 간편화
           * GraphQL을 사용하여, Analytics 대시보드 over-fetching 최소화
@@ -120,10 +123,10 @@ content:
           * 불면증 개선을 위한 스마트 Light-Therapy Glasses
           * 시장 데이터 분석, 고객 만족도 검증, Mechanical Design 담당
           * 높은 고객 만족도와 불면증치료 업계의 집중을 받으며, [Stanford University Dr.Jamie Zeitzer](https://profiles.stanford.edu/jamie-zeitzer) 교수님과 광학 연구 협업
-          * [ANSYS Design Analytics Award, 1등](https://uwaterloo.ca/engineering-ideas-clinic/design-analysis-competition)
-          * [SFF 온타리오주 Engineering Competition 혁신 디자인, 2등](https://www.instagram.com/p/CKrCyEUJ4pP/) (매년 링크 초기화로, 인스타그램만 남아있음)
-          * [Baylis Medical Capstone Design 수상](https://www.eng.uwaterloo.ca/2021-capstone-design/mechanical/participants-2/)
-          * 광선요법 치료 특허 출원, Google Patents [CA3081398A1](https://patents.google.com/patent/CA3081398A1/en?oq=CA3081398A1) (성명 오타)
+          * [1등, ANSYS Design Analytics Award](https://uwaterloo.ca/engineering-ideas-clinic/design-analysis-competition)
+          * [2등, SFF 온타리오주 Engineering Competition 혁신 디자인](https://www.instagram.com/p/CKrCyEUJ4pP/) (매년 링크 초기화로, 인스타그램만 남아있음)
+          * [수상, Baylis Medical Capstone Design](https://www.eng.uwaterloo.ca/2021-capstone-design/mechanical/participants-2/)
+          * 광선요법 치료 [특허 출원, Google Patents CA3081398A1](https://patents.google.com/patent/CA3081398A1/en?oq=CA3081398A1) (성명 오타)
           
   - title: 🧰 Skills  # title for the section
     quote: >
@@ -135,7 +138,7 @@ content:
         description: |
           * Django: 메인 백엔드 프레임웍
           * DRF(django_rest_framework): 현재 진행중인 Collaberr에서 Viewset, CustomJWTAuthentication, CustomManager 등 다양한 소스코드 overriding을 통해 이해도를 높임
-          * DRF_simplejwt: CustomJWTTokenObtainView을 구현하여, 로그인시 HttpOnly 쿠키에 있는 정보로, 유저 authentication 진행 (프런트엔드 업무 최소화)
+          * DRF_simplejwt: [CustomJWTLoginView](https://github.com/TonysHub/collaberr-backend/blob/main/core/api/accounts/views.py)를 구현하여, 로그인시 HttpOnly 쿠키에 있는 정보로, 유저 인증 (프런트엔드 업무 최소화)
           * Django_split_settings: prod, docker, envvar, aws 등 프로덕션 레벨의 설정 적용
           * Pytest & model-bakery: model-bakery를 이용하여 fixture 생성 후 pytest
            
@@ -146,16 +149,18 @@ content:
           * VPC: 네트워크와 권한 설정 Least-Privilege Principal 적용
           * Redshift Serverless: EventBridge를 통해 스케줄링 쿼리 생성
           * EC2: Bastion 호스트를 연결하고, SSH 방법을 정리해서 팀원들이 쉽게 이용할 수 있도록 공유
-          * S3, Route53, boto3 (AWS SDK), ElastiCache
-          * 특히 네트워크에 관심이 많아 O'Reilly에서 제공하는 [AWS 강의 정리](https://velog.io/@tonys_hub)
+          * S3, Route53, boto3, ElastiCache
+          * Glue Crawler, Athena
           * SageMaker: ELT 과정에서 다양한 전처리(One-hotencoding, stratifiedfolds, IQR) 과정을 통해 AutoML 적용, R 스코어 0.91
+          * 특히 네트워크에 관심이 많아 O'Reilly에서 제공하는 [AWS 강의 정리](https://velog.io/@tonys_hub)
 
       - layout: left
         title: Data
         description: |
-          * PostgreSQL: 모든 개인 프로젝트에 사용, Mixpanel Integration 데이터 스키마 제작 경험
+          * PostgreSQL: 모든 개인 프로젝트에 사용, Mixpanel User Analytics 데이터 스키마 제작 경험
           * MongoDB: 현업에서 사용
-          * Airflow: ETL 관련 DAG 작성
+          * GraphQL: 개인 프로젝트에서 대시보드 데이터 추출 목적으로 적용
+          * Airflow: S3 데이터를 Athena에 적재
           * Superset: Redshift Serverless, Redis Cache와 연결하여 대시보드 제작
           
 
