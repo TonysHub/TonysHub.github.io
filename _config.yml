@@ -56,7 +56,7 @@ content:
             url: https://github.com/TonysHub/collaberr-backend
         link: https://github.com/TonysHub/collaberr-backend
         quote: >
-          해외 마케팅 팀을 채용/운영 할 자본이 없는 중소기업에게 **해외 마케팅을 PaaS** 형태로 제공 <br>
+          해외 마케팅 팀을 채용/운영 할 자본이 없는 중소기업에게 해외 마케팅을 PaaS 형태로 제공 <br>
 
         description: |
           * Django를 활용한 **REST API**와 데이터 스키마 구축, 서버 배포 담당
@@ -80,7 +80,7 @@ content:
         link: https://github.com/data-dev-course/project2-team2
 
         quote: >
-          영화 진흥위원회 Open API를 활용하여 영화 트렌드 대시보드를 **AWS 인프라**에 띄워 배포 <br>
+          영화 진흥위원회 Open API를 활용하여 영화 트렌드 대시보드를 AWS 인프라에 띄워 배포 <br>
         description: |
           * AWS 인프라를 개인적으로 [공부](https://velog.io/@tonys_hub?tag=Knowledge)하여, 현업에서 쓰이는 구조와 동일한 [인프라](https://user-images.githubusercontent.com/43350428/242866357-a54e009f-0ec3-4b9d-8311-f5f19a28e08c.png) 구성 
           * **Bastion Host를 사용**함으로써 Private subnet의 접근을 제한하며, NAT Gateway를 통해 API 호출 후 Gateway Endpoint로 S3 버킷에 적재
