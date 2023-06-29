@@ -68,7 +68,7 @@ content:
           * AWS의 Least Privilege Principal를 모티브로 API request에서 최대한 제한적인 권한 설정
           * YouTube API OAuth2 연동 후, [Custom Hook](https://github.com/TonysHub/collaberr-backend/blob/main/core/plugins/youtube/youtube_analytics.py)을 생성하여 데이터 연결 간편화
           * GraphQL을 사용하여, Analytics 대시보드 over-fetching 최소화
-          * 현재 개발 진행중
+          * Postman API Documentation과 테스팅으로 프론트엔드 개발자와 API 소통 오류 방지
 
       - layout: left
         title: Movie Trend Dashboard
