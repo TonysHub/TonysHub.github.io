@@ -136,32 +136,32 @@ content:
       - layout: left
         title: Backend
         description: |
-          * **Django**: 메인 백엔드 프레임웍
-          * **DRF**(django_rest_framework): 현재 진행중인 Collaberr에서 Viewset, CustomJWTAuthentication, CustomManager 등 다양한 소스코드 overriding을 통해 이해도를 높임
-          * **DRF_simplejwt**: [CustomJWTLoginView](https://github.com/TonysHub/collaberr-backend/blob/main/core/api/accounts/views.py)를 구현하여, 로그인시 HttpOnly 쿠키에 있는 정보로, 유저 인증 (프런트엔드 업무 최소화)
-          * **Django_split_settings**: prod, docker, envvar, aws 등 프로덕션 레벨의 설정 적용
-          * **Pytest & model-bakery**: model-bakery를 이용하여 fixture 생성 후 pytest
+          * Django: 메인 백엔드 프레임웍
+          * DRF(django_rest_framework): 현재 진행중인 Collaberr에서 Viewset, CustomJWTAuthentication, CustomManager 등 다양한 소스코드 overriding을 통해 이해도를 높임
+          * DRF_simplejwt: [CustomJWTLoginView](https://github.com/TonysHub/collaberr-backend/blob/main/core/api/accounts/views.py)를 구현하여, 로그인시 HttpOnly 쿠키에 있는 정보로, 유저 인증 (프런트엔드 업무 최소화)
+          * Django_split_settings: prod, docker, envvar, aws 등 프로덕션 레벨의 설정 적용
+          * Pytest & model-bakery: model-bakery를 이용하여 fixture 생성 후 pytest
            
       
       - layout: left
         title: AWS
         description: |
-          * **VPC**: 네트워크와 권한 설정 Least-Privilege Principal 적용
-          * **Redshift Serverless**: EventBridge를 통해 스케줄링 쿼리 생성
-          * **EC2**: Bastion 호스트를 연결하고, SSH 방법을 정리해서 팀원들이 쉽게 이용할 수 있도록 공유
-          * **S3, Route53, boto3, ElastiCache**
-          * **Glue Crawler, Athena**
-          * **SageMaker**: ELT 과정에서 다양한 전처리(One-hotencoding, stratifiedfolds, IQR) 과정을 통해 AutoML 적용, R 스코어 0.91
+          * VPC: 네트워크와 권한 설정 Least-Privilege Principal 적용
+          * Redshift Serverless: EventBridge를 통해 스케줄링 쿼리 생성
+          * EC2: Bastion 호스트를 연결하고, SSH 방법을 정리해서 팀원들이 쉽게 이용할 수 있도록 공유
+          * S3, Route53, boto3, ElastiCache
+          * Glue Crawler, Athena
+          * SageMaker: ELT 과정에서 다양한 전처리(One-hotencoding, stratifiedfolds, IQR) 과정을 통해 AutoML 적용, R 스코어 0.91
           * 특히 네트워크에 관심이 많아 O'Reilly에서 제공하는 [AWS 강의 정리](https://velog.io/@tonys_hub)
 
       - layout: left
         title: Data
         description: |
-          * **PostgreSQL**: 모든 개인 프로젝트에 사용, Mixpanel User Analytics 데이터 스키마 제작 경험
-          * **MongoDB**: 현업에서 사용
-          * **GraphQL**: 개인 프로젝트에서 대시보드 데이터 추출 목적으로 적용
-          * **Airflow**: S3 데이터를 Athena에 적재
-          * **Superset**: Redshift Serverless, Redis Cache와 연결하여 대시보드 제작
+          * PostgreSQL: 모든 개인 프로젝트에 사용, Mixpanel User Analytics 데이터 스키마 제작 경험
+          * MongoDB: 현업에서 사용
+          * GraphQL: 개인 프로젝트에서 대시보드 데이터 추출 목적으로 적용
+          * Airflow: S3 데이터를 Athena에 적재
+          * Superset: Redshift Serverless, Redis Cache와 연결하여 대시보드 제작
           
 
   - title: 🎓 Education
