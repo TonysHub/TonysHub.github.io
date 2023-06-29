@@ -60,12 +60,11 @@ content:
         description: |
           * Django를 활용한 **REST API**와 데이터 스키마 구축, 서버 배포 담당
           * Docker를 사용한 획일화된 테스팅 환경 설정과 GitHub Action을 통해 [DockerHub](https://hub.docker.com/repositories/tonylee9692)와 연동 CI 구축
-          * Django-split-settings를 적용하여, **개발 및 배포 환경 분리**
-          * **유저 데이터 보안**을 최우선으로 생각하여, 민감 정보는 모두 server-side에서 Http Only Cookie로 처리 (JWT, CSRF, Youtube API Token 등)
-          * AWS의 Least Privilege를 모티브로 API request에서 최대한 제한적인 권한 설정
-          * Docker 컨테이너에 Postgres & Pgadmin을 연결하여 프런트엔드 개발자도 백엔드와 쉽게 연결되는 테스팅 환경 구축
-          * YouTube API OAuth2를 구현하여, 데이터 추출 완료
-          * Analytics Dashboard에 **GraphQL**을 사용함으로, overfetching 최소화
+          * Django-split-settings를 적용하여, [개발 및 배포 환경 분리](https://github.com/TonysHub/collaberr-backend/blob/main/core/project/settings/__init__.py)
+          * **유저 데이터 보안**을 최우선으로 생각하여, 민감 정보는 모두 server-side에서 Http Only Cookie로 처리 ([CustomJWT](https://github.com/TonysHub/collaberr-backend/blob/main/core/general/authentication.py), CSRF, Youtube API Token 등)
+          * AWS의 Least Privilege Principal를 모티브로 API request에서 최대한 제한적인 권한 설정
+          * YouTube API OAuth2 연동 후, [Custom Hook](https://github.com/TonysHub/collaberr-backend/blob/main/core/plugins/youtube/youtube_analytics.py)을 생성하여 데이터 연결 간편화
+          * GraphQL을 사용하여, Analytics 대시보드 over-fetching 최소화
           * 현재 개발 진행중
 
       - layout: left
@@ -87,6 +86,7 @@ content:
           * S3의 **Object-based Storage** 특성을 활용하여, 매일 추출한 데이터를 Over-ride 하여, 쿼리의 간편화
           * Amazon SageMaker를 이용하여, 당일 영화 매출 예측 모델을 구축하여, Redshift ETL 작업 수행
           * 프로젝트 진행 도중 Redshift Serverless의 비용이 많이 나오는 것을 인지하여, **Amazon ElastiCache Redis 적용**, AWS 비용 70% 감소
+          * 개선 버전으로, AWS Athena와 S3 버킷을 Glue Crawler를 통해 연동하여 Redshift Serverless 없이 작동
           * 프로젝트 팀장으로써, 각 조원의 성향과 역량을 고려하여 트렐로 티켓 배정
           
       - layout: left
