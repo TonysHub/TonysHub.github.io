@@ -66,7 +66,7 @@ content:
           * **유저 데이터 보안**을 최우선으로 생각하여, 민감 정보는 모두 server-side에서 Http Only Cookie로 처리 <br>
             ([CustomJWT](https://github.com/TonysHub/collaberr-backend/blob/main/core/general/authentication.py), CSRF, Youtube API Token 등)
           * AWS의 Least Privilege Principal를 모티브로 API request에서 최대한 제한적인 권한 설정
-          * YouTube API OAuth2 연동 후, [Custom Hook](https://github.com/TonysHub/collaberr-backend/blob/main/core/plugins/youtube/youtube_analytics.py)을 생성하여 데이터 연결 간편화
+          * YouTube API OAuth2 연동 후, [Custom Hook](https://github.com/TonysHub/collaberr-backend/tree/main/core/plugins/youtube)을 생성하여 데이터 연결 간편화
           * GraphQL을 사용하여, Analytics 대시보드 over-fetching 최소화
           * Postman API Documentation과 테스팅으로 프론트엔드 개발자와 API 소통 오류 방지
 
