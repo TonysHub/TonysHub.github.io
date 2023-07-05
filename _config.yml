@@ -51,22 +51,22 @@ content:
       - layout: left
         title: Collaberr
         sub_title: django 백엔드 및 Cloud
-        caption: 2023.06 ~ 현재
+        caption: 2023.06 ~ 현재 (개인 프로젝트)
         additional_links:
           - title: Collaberr-backend
             icon: fab fa-github
             url: https://github.com/TonysHub/collaberr-backend
         link: https://github.com/TonysHub/collaberr-backend
         quote: >
-          해외 마케팅 팀을 채용/운영 할 자본이 없는 중소기업에게 **해외 마케팅을 PaaS** 형태로 제공 <br>
+          해외 마케팅 팀을 채용/운영 할 자본이 없는 중소기업에게 해외 마케팅을 PaaS 형태로 제공 <br>
         description: |
           * Django를 활용한 **REST API**와 데이터 스키마 구축, 서버 배포 담당
           * Docker를 사용한 획일화된 테스팅 환경 설정과 GitHub Action을 통해 [DockerHub](https://hub.docker.com/repositories/tonylee9692)와 연동 CI 구축
           * Django-split-settings를 적용하여, [개발 및 배포 환경 분리](https://github.com/TonysHub/collaberr-backend/blob/main/core/project/settings/__init__.py)
           * 민감 정보는 모두 server-side에서 Http Only Cookie로 처리, **유저 데이터 보안**
             ([CustomJWT](https://github.com/TonysHub/collaberr-backend/blob/main/core/general/authentication.py), CSRF, Youtube API Token 등)
-          * YouTube API OAuth2 연동 Layer와 [Custom Hook](https://github.com/TonysHub/collaberr-backend/tree/main/core/plugins/youtube)을 설계하여 데이터 연결 간편화
-          * **Postman API Documentation**과 Postman Flow 테스팅을 통해 프론트엔드 개발자와 API 소통 오류 최소화
+          * **YouTube API OAuth2** 연동 Layer와 [Custom Hook](https://github.com/TonysHub/collaberr-backend/tree/main/core/plugins/youtube)을 설계하여 데이터 연결 간편화
+          * Postman API Documentation과 Postman Flow 테스팅을 통해 프론트엔드 개발자와 API 소통 오류 최소화
 
       - layout: left
         title: Movie Trend Dashboard
@@ -79,12 +79,12 @@ content:
         link: https://github.com/data-dev-course/project2-team2
 
         quote: >
-          영화 진흥위원회 Open API를 활용하여 영화 트렌드 대시보드 **AWS 인프라** 배포 <br>
+          영화 진흥위원회 Open API를 활용하여 영화 트렌드 대시보드 AWS 인프라 배포 <br>
         description: |
           * AWS 인프라를 개인적으로 [공부](https://velog.io/@tonys_hub?tag=Knowledge)하여, 현업에서 쓰이는 구조와 동일한 [인프라](https://user-images.githubusercontent.com/43350428/242866357-a54e009f-0ec3-4b9d-8311-f5f19a28e08c.png) 설계 
           * **Bastion Host를 사용**함으로써 Private subnet의 접근을 제한하여, 데이터 유출 방지
           * Amazon SageMaker AutoML를 사용하여, 당일 영화 매출 예측 모델을 구축하여, Redshift ETL 작업 수행
-          * 프로젝트 진행 도중 Redshift Serverless의 비용이 많이 나오는 것을 인지하여, **Amazon ElastiCache Redis 적용**, AWS 비용 70% 감소
+          * Redshift Serverless의 비용이 많이 나오는 것을 인지하여, **Amazon ElastiCache Redis 적용**, AWS 비용 70% 감소
           * 개선 방안으로, **AWS Athena**와 S3 버킷을 Glue Crawler를 통해 연동하여 Redshift Serverless 없이 ETL, ELT 구현
           * 프로젝트 팀장으로써, 각 조원의 성향과 역량을 고려하여 트렐로 티켓 배정
           
