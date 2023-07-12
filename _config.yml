@@ -65,7 +65,7 @@ content:
           * Django-split-settings를 적용하여, [개발 및 배포 환경 분리](https://github.com/TonysHub/collaberr-backend/blob/main/core/project/settings/__init__.py)
           * 민감 정보는 모두 server-side에서 Http Only Cookie로 처리, **유저 데이터 보안**
             ([CustomJWT](https://github.com/TonysHub/collaberr-backend/blob/main/core/general/authentication.py), CSRF, Youtube API Token 등)
-          * **YouTube API OAuth2** 연동 Layer와 [Custom Hook](https://github.com/TonysHub/collaberr-backend/tree/main/core/plugins/youtube)을 설계하여 데이터 연결 간편화
+          * **YouTube API OAuth2** 연동 Layer와 [Custom Hook](https://github.com/TonysHub/collaberr-backend/tree/main/core/plugins/youtube_analytics)을 설계하여 데이터 연결 간편화
           * Postman API Documentation과 Postman Flow 테스팅을 통해 프론트엔드 개발자와 API 소통 오류 최소화
 
       - layout: left
